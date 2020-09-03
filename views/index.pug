@@ -1,10 +1,14 @@
-html
-  head 
-  title=title
-  body 
-    h1='This is a mini-message board project built with Express and MongoDB'
+extends layout
 
-each message in messages 
+block content
+
+  each message in messages 
     h2= message.user
+    h3= 'Message:'
     p= message.text
+    h3= 'Sent on:'
     time(datetime=message.added)= message.added
+
+  br
+  br
+  a(href='/new') Post a new message
