@@ -1,0 +1,10 @@
+html
+  head 
+  title=title
+  body 
+    h1='This is a mini-message board project built with Express and MongoDB'
+
+each message in messages 
+    h2= message.user
+    p= message.text
+    time(datetime=message.added)= message.added
