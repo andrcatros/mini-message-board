@@ -1,0 +1,15 @@
+html
+  head 
+  title=title
+  body 
+    h1='This is a mini-message board project built with Express and MongoDB'
+
+    h2=heading
+     form(method='POST' action='/new')
+          div.form-group
+            label(for='user') Your username
+            input#user.form-control(type='text', name='user')
+          div.form-group
+            label(for='text') Your message
+            input#text.form-control(type='text', placeholder='enter your message here' name='text')
+          button.btn.btn-primary(type='submit') Send message!
